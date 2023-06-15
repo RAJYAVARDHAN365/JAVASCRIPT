@@ -1,0 +1,87 @@
+<div id="form1"  style="border: 2px solid black ; width: 275px; background-color: yellow; align-items: center;">
+    <form name="userForm" action="" method="post">
+    Name : <input type="text" value="" id="name" name="name"  >
+    <div id="name_error" style="color: red;"></div>
+    </br>
+    age : <input type="text" value="" id="age" name="age" >
+    <div id="age_error" ></div>
+    </br>
+    salary
+     : <input type="text" value="" id="salary" name="salary" >
+    <div id="salary_error" ></div>
+    </br>
+     company
+    : <input type="text" value="" id="company" name="company" >
+    <div id="company_error" ></div>
+    </br>
+    
+    
+    </form>
+    </div>
+    
+       
+        
+    <script>
+
+
+        //creates a listener for when you press a key
+window.onkeyup = keyup;
+
+//creates a global Javascript variable
+var inputTextValue;
+
+function keyup(e) {
+            var name = document.querySelector('input#name').value;
+            var age = document.querySelector('input#age').value;
+            var salary = document.querySelector('input#salary').value;
+            var company = document.querySelector('input#company').value;
+            temp = true;
+           if(!name){
+            temp = false;
+               document.getElementById('name_error').innerHTML ='Please enter your name';
+               setTimeout(function hideerror(){
+                document.getElementById('name_error').innerHTML ='';
+               },5000) 
+           }else{ 
+            document.getElementById('name_error').innerHTML ='';
+           }
+          
+           if(!age){
+            temp = false;
+               document.getElementById('age_error').innerHTML ='Please enter your age';
+           }else{
+            if(isNaN(age)){
+                temp = false;
+                document.getElementById('age_error').innerHTML ='age should be ';
+            }else{
+                document.getElementById('age_error').innerHTML ='';
+            }
+           }
+           if(!salary){
+            temp = false;
+               document.getElementById('salary_error').innerHTML ='Please enter your salary ';
+           }else{
+            document.getElementById('salary_error').innerHTML ='';
+           }
+           {
+           if(!company){
+            temp = false;
+               document.getElementById('company_error').innerHTML ='Please enter your company name';
+           }else{
+            document.getElementById('company_error').innerHTML ='';
+           }
+        }
+           if(temp==true){
+            alert(
+
+            'Name' + name + ',' +
+            'Age' + age + ',' +
+            'Salary' + salary + ',' +
+            'Company' + company + ','
+
+            );
+           }
+           
+        }
+    </script>
+
