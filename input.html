@@ -1,0 +1,58 @@
+<html>
+    <head>
+    <title>blinking text</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+  .blink {
+                animation: blinker 1.5s linear infinite;
+                color: red;
+                font-family: sans-serif;
+            }
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+           
+</style>
+</head>
+<body>
+    
+ <h1 id="blink" class="" style="color: orangered; align-items: center;
+ margin-top: 281px; margin-left: 487px; font-size: 80px;" >JAI SHREE RAM</h1>
+
+
+ 
+        <button onclick="blinkon()" style="background-color: greenyellow; margin-left: 700px;">blink it</button>
+        <button onclick="blinkoff()" style="background-color: red;">blink off</button>
+</body>
+</html>
+
+    <script>
+     
+     function blinkon(){
+       
+        var x = document.getElementById("blink");
+        x.classList.add("blink");
+        
+
+    };
+    function blinkoff(){
+        
+        var x = document.getElementById("blink");
+        x.classList.remove("blink");
+    };
+
+
+    // setInterval(blinkon, 1000);
+     
+    </script>
+        
+
+    
+
+
+
+
+
+
